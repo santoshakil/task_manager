@@ -12,7 +12,7 @@ class TaskView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text(t?.task ?? 'Task'),
+        title: Text(t.task),
       ),
       body: const Text('Task'),
     );
