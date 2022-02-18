@@ -1,4 +1,4 @@
-import 'package:fluent_ui/fluent_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../localizations/localizations.dart';
@@ -9,13 +9,12 @@ class TaskView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     t = AppLocalizations.of(context)!;
-    return NavigationView(
-      appBar: const NavigationAppBar(
+    return Scaffold(
+      appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text('Task'),
+        title: Text(t?.task ?? 'Task'),
       ),
-      content: const Text('Task'),
-      pane: NavigationPane(),
+      body: const Text('Task'),
     );
   }
 }

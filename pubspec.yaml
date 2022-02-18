@@ -9,7 +9,6 @@ environment:
   sdk: ">=2.16.1 <3.0.0"
 
 dependencies:
-  fluent_ui: ^3.9.0
   flutter:
     sdk: flutter
   flutter_localizations:
