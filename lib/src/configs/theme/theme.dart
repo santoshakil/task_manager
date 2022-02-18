@@ -27,3 +27,18 @@ extension ThemeExtension on themes {
     }
   }
 }
+
+const bigBBoldText = TextStyle(
+  fontSize: 30,
+  fontWeight: FontWeight.w900,
+);
+
+const smallBBoldText = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w900,
+);
+
+const smallBoldText = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.bold,
+);

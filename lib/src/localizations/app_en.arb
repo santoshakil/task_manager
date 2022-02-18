@@ -3,5 +3,7 @@
   "@appTitle": {
     "description": "The title of the application"
   },
-  "task": "Task"
+  "task": "Task",
+  "tasks": "Tasks",
+  "today": "Today"
 }

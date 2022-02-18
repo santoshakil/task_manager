@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:task_manager/src/modules/task/view/components/header/header.dart';
 
-import '../../../components/appbar/appbar.dart';
 import '../../../localizations/localizations.dart';
 
 class TaskView extends StatelessWidget {
@@ -10,9 +10,15 @@ class TaskView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     t = AppLocalizations.of(context)!;
-    return const Scaffold(
-      appBar: PreferredSize(preferredSize: appBarSize, child: KAppBar()),
-      body: Text('Task'),
+    return Scaffold(
+      body: ListView.builder(
+        itemCount: _items.length,
+        itemBuilder: (_, i) => _items[i],
+      ),
     );
   }
 }
+
+final _items = [
+  const TaskHeader(),
+];

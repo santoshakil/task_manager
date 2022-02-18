@@ -11,7 +11,7 @@ class KAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(title ?? t.task),
+      title: Text(title ?? t.tasks),
     );
   }
 }

@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 
 final lightTheme = ThemeData.light().copyWith(
   visualDensity: VisualDensity.adaptivePlatformDensity,
-  appBarTheme: AppBarTheme(
+  appBarTheme: const AppBarTheme(
     elevation: 1,
-    color: Colors.teal.shade700,
-    iconTheme: const IconThemeData(color: Colors.black),
+    color: Colors.white10,
+    iconTheme: IconThemeData(color: Colors.teal),
   ),
+  scaffoldBackgroundColor: Colors.grey.shade100,
+  cardColor: Colors.white,
+  iconTheme: const IconThemeData(color: Colors.blueGrey),
 );
