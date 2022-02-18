@@ -33,6 +33,20 @@ const bigBBoldText = TextStyle(
   fontWeight: FontWeight.w900,
 );
 
+const mediumBBoldText = TextStyle(
+  fontSize: 24,
+  fontWeight: FontWeight.w900,
+);
+
+const bBoldText = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.w900,
+);
+
+const boldText = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.w700,
+);
 const smallBBoldText = TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w900,

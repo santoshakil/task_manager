@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-final lightTheme = ThemeData.light().copyWith(
+final lightTheme = ThemeData(
+  brightness: Brightness.light,
+  fontFamily: 'Nunito',
   visualDensity: VisualDensity.adaptivePlatformDensity,
   appBarTheme: const AppBarTheme(
     elevation: 1,

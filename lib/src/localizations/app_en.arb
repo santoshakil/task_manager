@@ -5,5 +5,9 @@
   },
   "task": "Task",
   "tasks": "Tasks",
-  "today": "Today"
+  "today": "Today",
+  "taskSummery": "Task summery",
+  "projects": "Projects",
+  "asigned": "Asigned",
+  "complated": "Complated"
 }
