@@ -1,4 +1,6 @@
 import 'package:fluent_ui/fluent_ui.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'configs/theme/theme.dart';
@@ -24,8 +26,15 @@ class _FluentApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return FluentApp(
       debugShowCheckedModeBanner: false,
-      home: const TaskView(),
       theme: ref.watch(themeProvider),
+      supportedLocales: const [Locale('en', '')],
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      home: const TaskView(),
     );
   }
 }
