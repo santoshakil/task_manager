@@ -1,8 +1,8 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'config/theme/theme.dart';
-import 'task/view/task_view.dart';
+import 'configs/theme/theme.dart';
+import 'modules/task/view/task_view.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
