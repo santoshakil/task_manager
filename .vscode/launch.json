@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "task_manager",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "task_manager (profile mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    }
+  ]
+}
