@@ -4,6 +4,7 @@ import 'package:task_manager/src/modules/task/view/components/header/header.dart
 
 import '../../../localizations/localizations.dart';
 import 'components/summary/summary.dart';
+import 'components/tasks/tasks_list_view.dart';
 
 class TaskView extends StatelessWidget {
   const TaskView({Key? key}) : super(key: key);
@@ -12,15 +13,22 @@ class TaskView extends StatelessWidget {
   Widget build(BuildContext context) {
     t = AppLocalizations.of(context)!;
     return Scaffold(
-      body: ListView.builder(
-        itemCount: _items.length,
-        itemBuilder: (_, i) => _items[i],
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const TaskHeader(),
+            Expanded(
+              child: ListView(
+                children: const [
+                  TaskSummaryView(),
+                  TaskListView(),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
-
-final _items = [
-  const TaskHeader(),
-  const TaskSummaryView(),
-];

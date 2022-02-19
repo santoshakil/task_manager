@@ -15,7 +15,7 @@ class TaskSummaryView extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(t.taskSummery, style: bBoldText),
+          Text(' ' + t.taskSummery, style: bBoldText),
           const SizedBox(height: 10),
           Container(
             height: 200,
