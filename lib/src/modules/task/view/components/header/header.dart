@@ -25,7 +25,7 @@ class TaskHeader extends StatelessWidget {
           const Spacer(),
           KDropDown(title: t.today, icon: Icons.work_outline_rounded),
           const SizedBox(width: 8),
-          KDropDown(title: t.today, icon: Icons.filter_alt_outlined),
+          KDropDown(title: t.filter, icon: Icons.filter_alt_outlined),
           IconButton(
             icon: const Icon(Icons.search_rounded),
             onPressed: () {},

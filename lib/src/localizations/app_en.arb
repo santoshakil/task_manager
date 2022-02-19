@@ -9,5 +9,9 @@
   "taskSummery": "Task summery",
   "projects": "Projects",
   "asigned": "Asigned",
-  "complated": "Complated"
+  "complated": "Complated",
+  "filter": "Filter",
+  "projectEstimate": "Project estimate",
+  "team": "Team",
+  "teamMembers": "Team Members"
 }

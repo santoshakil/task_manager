@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager/src/components/profile/profile.dart';
 import 'package:task_manager/src/configs/theme/theme.dart';
 
 import '../../../../../localizations/localizations.dart';
@@ -17,7 +18,7 @@ class TaskSummaryView extends StatelessWidget {
           Text(t.taskSummery, style: bBoldText),
           const SizedBox(height: 10),
           Container(
-            height: 160,
+            height: 200,
             width: MediaQuery.of(context).size.width,
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
@@ -26,32 +27,101 @@ class TaskSummaryView extends StatelessWidget {
             ),
             child: ListView(
               scrollDirection: Axis.horizontal,
-              children: [
-                SummaryCard(
-                  icon: Icons.work_outline_rounded,
-                  title: t.projects,
-                  subtitle: '23',
-                  color: Theme.of(context).unselectedWidgetColor,
-                ),
-                const SizedBox(width: 10),
-                SummaryCard(
-                  icon: Icons.assignment_rounded,
-                  title: t.asigned,
-                  subtitle: '65',
-                ),
-                const SizedBox(width: 10),
-                SummaryCard(
-                  icon: Icons.done_all_rounded,
-                  title: t.complated,
-                  subtitle: '34',
-                  color: Theme.of(context).secondaryHeaderColor,
-                ),
-                const VerticalDivider(width: 30),
+              children: const [
+                ProjectEstimateView(),
+                VerticalDivider(width: 30),
+                TeamView(),
               ],
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class ProjectEstimateView extends StatelessWidget {
+  const ProjectEstimateView({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            const Icon(Icons.dashboard_rounded),
+            const SizedBox(width: 7),
+            Text(t.projectEstimate, style: bBoldText),
+          ],
+        ),
+        const SizedBox(height: 10),
+        Row(
+          children: [
+            SummaryCard(
+              icon: Icons.work_outline_rounded,
+              title: t.projects,
+              subtitle: '23',
+              color: Theme.of(context).unselectedWidgetColor,
+            ),
+            const SizedBox(width: 10),
+            SummaryCard(
+              icon: Icons.assignment_rounded,
+              title: t.asigned,
+              subtitle: '65',
+              accentColor: Theme.of(context).primaryColorLight,
+            ),
+            const SizedBox(width: 10),
+            SummaryCard(
+              icon: Icons.done_all_rounded,
+              title: t.complated,
+              subtitle: '34',
+              color: Theme.of(context).secondaryHeaderColor,
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class TeamView extends StatelessWidget {
+  const TeamView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            const Icon(Icons.group_rounded),
+            const SizedBox(width: 7),
+            Text(t.team, style: bBoldText),
+          ],
+        ),
+        const SizedBox(height: 10),
+        SizedBox(
+          height: 140,
+          width: 200,
+          child: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              childAspectRatio: 0.8,
+              crossAxisSpacing: 7,
+              crossAxisCount: 3,
+              mainAxisSpacing: 7,
+            ),
+            itemCount: 100,
+            itemBuilder: (context, index) => ProfileIcon(
+              asset: 'assets/svg/man.svg',
+              name: 'User $index',
+              pendingTask: index,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
