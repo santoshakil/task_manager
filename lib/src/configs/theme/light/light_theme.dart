@@ -11,5 +11,7 @@ final lightTheme = ThemeData(
   ),
   scaffoldBackgroundColor: Colors.grey.shade100,
   cardColor: Colors.white,
+  secondaryHeaderColor: Colors.teal,
   iconTheme: const IconThemeData(color: Colors.blueGrey),
+  shadowColor: Colors.grey.shade100,
 );

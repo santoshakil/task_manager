@@ -10,7 +10,7 @@ class TaskHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(bottom: 10, top: 5),
+      padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
         borderRadius: const BorderRadius.only(
@@ -20,8 +20,8 @@ class TaskHeader extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const SizedBox(width: 12),
-          Text(t.tasks, style: bigBBoldText),
+          const SizedBox(width: 10),
+          Text(t.tasks, style: vBigBBoldText),
           const Spacer(),
           KDropDown(title: t.today, icon: Icons.work_outline_rounded),
           const SizedBox(width: 8),

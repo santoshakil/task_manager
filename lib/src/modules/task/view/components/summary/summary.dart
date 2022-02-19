@@ -16,9 +16,14 @@ class TaskSummaryView extends StatelessWidget {
         children: [
           Text(t.taskSummery, style: bBoldText),
           const SizedBox(height: 10),
-          SizedBox(
+          Container(
+            height: 160,
             width: MediaQuery.of(context).size.width,
-            height: 140,
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Theme.of(context).cardColor,
+              borderRadius: BorderRadius.circular(20),
+            ),
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
@@ -36,11 +41,10 @@ class TaskSummaryView extends StatelessWidget {
                 ),
                 const SizedBox(width: 10),
                 SummaryCard(
-                  icon: Icons.assignment_rounded,
+                  icon: Icons.done_all_rounded,
                   title: t.complated,
                   subtitle: '34',
-                  color: Theme.of(context).dialogBackgroundColor,
-                  accentColor: Theme.of(context).primaryColor,
+                  color: Theme.of(context).secondaryHeaderColor,
                 ),
                 const VerticalDivider(width: 30),
               ],
@@ -78,7 +82,14 @@ class SummaryCard extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           color: color ?? Theme.of(context).primaryColor,
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 5,
+              offset: const Offset(0, 3),
+              color: Theme.of(context).shadowColor,
+            ),
+          ],
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -98,7 +109,7 @@ class SummaryCard extends StatelessWidget {
             const SizedBox(height: 5),
             Text(
               subtitle,
-              style: mediumBBoldText.copyWith(
+              style: bigBBoldText.copyWith(
                 color: accentColor ?? Theme.of(context).scaffoldBackgroundColor,
               ),
             ),

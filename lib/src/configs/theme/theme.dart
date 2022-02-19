@@ -28,8 +28,13 @@ extension ThemeExtension on themes {
   }
 }
 
+const vBigBBoldText = TextStyle(
+  fontSize: 34,
+  fontWeight: FontWeight.w900,
+);
+
 const bigBBoldText = TextStyle(
-  fontSize: 30,
+  fontSize: 28,
   fontWeight: FontWeight.w900,
 );
 
